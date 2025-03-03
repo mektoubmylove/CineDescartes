@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Films - CineDescartes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styleFilms.css">
+</head>
+<body>
+  <!-- Navbar (identique sur toutes les pages) -->
+  <nav class="navbar">
+    <div class="logo">CineDescartes</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="films.html">Films</a></li>
+      <li><a href="series.html">Séries</a></li>
+      <li><a href="recommendations.html">Nos recommandations</a></li>
+    </ul>
+    <div class="profile">
+      <div class="toggle-container">
+        <i class="fas fa-moon"></i>
+        <div class="toggle-ball"></div>
+      </div>
+      <img src="images/profile.png" alt="Profile">
+    </div>
+  </nav>
+
+  <!-- Conteneur de la grille des films -->
+  <div id="films-grid" class="grid-container">
+    <!-- La grille sera générée dynamiquement via films.js -->
+  </div>
+
+  <!-- Overlay pour afficher le poster en grand et le titre lors du clic -->
+  <div id="film-overlay" class="film-overlay">
+    <img id="overlay-poster" src="" alt="Poster du film">
+    <h1 id="overlay-title"></h1>
+  </div>
+
+  <!-- Inclusion du fichier JavaScript dédié à la page Films -->
+  <script src="js/films.js"></script>
+</body>
+</html>

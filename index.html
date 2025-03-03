@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Aucun changement dans le head -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineDescartes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar (identique sur toutes les pages) -->
+    <nav class="navbar">
+        <div class="logo">CineDescartes</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="films.html">Films</a></li>
+            <li><a href="series.html">Séries </a></li>
+            <li><a href="recommendations.html">Nos recommendations</a></li>
+        </ul>
+        <div class="profile">
+            <!-- Le toggle doit avoir EXACTEMENT la même structure partout -->
+            <div class="toggle-container" >
+                <i class="fas fa-moon"></i>
+                <div class="toggle-ball"></div>
+            </div>
+            <img src="images/profile.png" alt="Profile">
+        </div>
+    </nav>
+
+    <!-- Sidebar 
+    <div class="sidebar">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-home"></i>
+        <i class="fas fa-users"></i>
+        <i class="fas fa-bookmark"></i>
+        <i class="fas fa-tv"></i>
+    </div>-->
+
+    <!-- Sliders -->
+    <!-- Ajouter data-category pour différencier les sliders si nécessaire -->
+    <div class="slider-container" data-category="main">
+        <h1>Retour sur la carrière d'Alain Delon</h1>
+        <div class="slider">
+            <div class="slider-content" id="slider-content1"></div>
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div class="slider-container" data-category="classics">
+        <h1>Les Classiques Français</h1>
+        <div class="slider">
+            <div class="slider-content" id="slider-content2"></div>
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <div class="slider-container" data-category="new">
+        <h1>Décennie : 2020s</h1>
+        <div class="slider">
+            <div class="slider-content" id="slider-content3"></div>
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+	
+    <div class="slider-container" data-category="HK">
+        <h1>Hong Kong</h1>
+        <div class="slider">
+            <div class="slider-content" id="slider-content4"></div>
+            <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <!-- Script JS (doit être identique sur toutes les pages) -->
+    <script src="js/app.js"></script>
+</body>
+</html>

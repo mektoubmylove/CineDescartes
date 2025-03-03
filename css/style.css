@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #141414;
+    color: white;
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease !important;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, transparent);
+    transition: all 0.4s ease-in-out;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #e50914;
+    transition: color 0.4s ease-in-out;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    transition: all 0.4s ease-in-out;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile img {
+    width: 40px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-container {
+    position: relative;
+    width: 45px;
+    height: 20px;
+    background-color: #555;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle-ball {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    left: 2px;
+    top: 2px;
+}
+
+.fa-moon {
+    position: absolute;
+    right: 5px;
+    font-size: 12px;
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle-ball.active {
+    transform: translateX(25px);
+    background-color: #333;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 0 10px 10px 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.slider-container {
+    padding: 100px 50px;
+}
+
+.slider {
+    position: relative;
+    margin-top: 20px;
+    margin-left: -60px;
+    padding: 0 40px; /* Ajout important */
+}
+
+.slider-content {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease;
+}
+
+.movie-card {
+    min-width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-btn { 
+    left: 25px; /* Modification importante */
+}
+
+.next-btn { 
+    right: 25px; /* Modification importante */
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .slider-container {
+        padding: 100px 20px;
+    }
+
+    .slider {
+        padding: 0 30px; /* Ajout mobile */
+    }
+
+    .prev-btn, .next-btn {
+        width: 35px;
+        height: 35px;
+        padding: 10px;
+    }
+
+    .prev-btn { 
+        left: 10px; /* Ajustement mobile */
+    }
+
+    .next-btn { 
+        right: 10px; /* Ajustement mobile */
+    }
+}
+
+/* Dark/Light Mode */
+body.light-mode {
+    background-color: #f4f4f4 !important;
+    color: #333 !important;
+}
+
+body.light-mode .navbar {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.7) 10%, transparent);
+}
+
+body.light-mode .nav-links a {
+    color: #333;
+}
+
+body.light-mode .sidebar {
+    background-color: rgba(255,255,255,0.6);
+}
+
+body.light-mode .toggle-container {
+    background-color: #ccc;
+}
+
+body.light-mode .movie-card {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+body.light-mode .fa-moon {
+    opacity: 0;
+}
+
+/* Transitions supplémentaires */
+h1, h2, h3, h4, h5, h6 {
+    transition: color 0.4s ease-in-out;
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+.movie-details-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Alignement en haut */
+    padding: 100px 50px;
+    flex-wrap: wrap;
+}
+
+.movie-poster {
+    flex: 0 0 300px;
+}
+
+.movie-poster img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.movie-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Assure que le contenu commence en haut */
+}
+
+.movie-info h1 {
+    font-size: 2.5rem;
+    margin-top: 0; /* Supprime tout espace au-dessus */
+    margin-bottom: 15px;
+}
+
+.movie-info h3 {
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #888;
+}
+
+.movie-info p {
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .movie-details-container {
+        flex-direction: column;
+        padding: 80px 20px;
+    }
+    
+    .movie-poster {
+        flex: none;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}
+.movie-link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Styles pour la vidéo */
+.movie-trailer {
+    margin: 40px ;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.movie-trailer video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+}
+
+/* Styles pour l'article */
+.article {
+    margin: 40px ;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.article h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.article-content {
+    white-space: pre-line;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .movie-trailer {
+        margin-top: 20px;
+    }
+    
+    .article {
+        padding: 15px;
+    }
+}
+
+.slider-content {
+    overflow: visible !important; /* Ajoutez cette ligne */
+    min-height: 350px; /* Garantit l'espace pour les images */
+}

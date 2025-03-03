@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Détails du film - CineDescartes</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- N'oubliez pas d'inclure Font Awesome si vous en avez besoin -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">CineDescartes</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="films.html">Films</a></li>
+      <li><a href="series.html">Séries</a></li>
+      <li><a href="recommendations.html">Nos recommandations</a></li>
+    </ul>
+    <div class="profile">
+      <div class="toggle-container">
+        <i class="fas fa-moon"></i>
+        <div class="toggle-ball"></div>
+      </div>
+      <img src="images/profile.png" alt="Profile">
+    </div>
+  </nav>
+
+  <!-- Conteneur pour les détails du film -->
+  <div class="movie-details-container">
+    <div class="movie-poster">
+        <img id="poster" src="" alt="Affiche du film">
+    </div>
+    <div class="movie-info">
+        <h1 id="movie-title"></h1>
+        <h3 id="movie-meta"></h3>
+        <p id="movie-description"></p>
+    </div>
+</div>
+
+<!-- Conteneur pour la vidéo -->
+<div class="movie-trailer">
+    <video id="movie-video" controls>
+        Votre navigateur ne supporte pas la vidéo.
+    </video>
+</div>
+
+<!-- Conteneur pour l'article -->
+<div class="article">
+    <h2>Article</h2>
+    <p id="movie-article" class="article-content"></p>
+</div>
+
+  
+
+
+  <script src="js/movie.js"></script>
+</body>
+</html>
