@@ -25,7 +25,7 @@ function shuffleArray(array) {
         localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });
   
-    // Exemple de tableau de films (à adapter/étendre)
+    
     const movies = [
         { 
           id: 1, 
@@ -33,9 +33,7 @@ function shuffleArray(array) {
           year: 1960, 
           director: "René Clément", 
           poster: "images/movie1.jpg", 
-          description: "Le film raconte l'histoire de Tom Ripley, un jeune homme ambitieux et manipulateur, qui est envoyé en Europe pour convaincre Philippe Greenleaf, un héritier riche, de revenir aux États-Unis.",
-          article: "Plein Soleil est un film captivant sur la manipulation, l'aspiration à un statut social et la beauté de la tromperie. Son esthétique est marquée par des paysages méditerranéens magnifiques et une ambiance tendue." 
-      },
+         },
       { 
           id: 2, 
           title: "La Piscine", 

@@ -357,3 +357,7 @@ button {
     overflow: visible !important; /* Ajoutez cette ligne */
     min-height: 350px; /* Garantit l'espace pour les images */
 }
+
+#movie-description {
+    white-space: pre-line;
+  }

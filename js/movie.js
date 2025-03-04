@@ -11,7 +11,7 @@ const movies = [
     year: 1960, 
     director: "René Clément", 
     poster: "images/movie1.jpg", 
-    description: "Le film raconte l'histoire de Tom Ripley, un jeune homme ambitieux et manipulateur, qui est envoyé en Europe pour convaincre Philippe Greenleaf, un héritier riche, de revenir aux États-Unis.",
+    description: "France-Italie / 1959 / 120 min \n\n D\'après le roman Monsieur Ripley de Patricia Highsmith.\n Avec Alain Delon, Maurice Ronet, Marie Laforêt.\n\n Tom Ripley est chargé par le père de son ami Philippe d'aller chercher le jeune homme, parti en Italie avec sa petite amie, et de le ramener en Californie. Tom s\'immisce peu à peu dans l'intimité du couple, malgré le mépris que Philippe lui porte.",
     article: "Plein Soleil est un film captivant sur la manipulation, l'aspiration à un statut social et la beauté de la tromperie. Son esthétique est marquée par des paysages méditerranéens magnifiques et une ambiance tendue." 
 },
 { 
